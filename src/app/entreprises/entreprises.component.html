@@ -1,0 +1,321 @@
+<div class="row">
+  <div class="col-12">
+    <!-- <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Project Listing</h4>
+        <h5 class="card-subtitle text-muted">Overview of the projects</h5>
+        <div class="table-responsive">
+          <table class="table align-middle text-nowrap">
+              <thead>
+                  <tr>
+                      <th class="text-dark font-medium fs-4">Team Lead</th>
+                      <th class="text-dark font-medium fs-4">Project</th>
+                      <th class="text-dark font-medium fs-4">Status</th>
+                      <th class="text-dark font-medium fs-4">Weeks</th>
+                      <th class="text-dark font-medium fs-4">Budget</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr *ngFor='let ts of topSelling'>
+                      <td>
+                          <div class="d-flex align-items-center">
+                              <img [src]=ts.image alt="user" width="45" class="rounded-circle">
+                              <div class="ms-3">
+                                  <h5 class="mb-0 font-medium">{{ts.uname}}</h5>
+                                  <span class="text-muted">{{ts.gmail}}</span>
+                              </div>
+                          </div>
+                      </td>
+                      <td class="fs-4">{{ts.productName}}</td>
+                      <td>
+                          <span class="p-2 bg-{{ts.status}} rounded-circle d-inline-block ms-3"></span>
+                      </td>
+
+                      <td>
+                          <h5 class="mb-0 fw-normal">{{ts.weeks}}</h5>
+                      </td>
+                      <td>
+                          <h5 class="mb-0 fw-normal">{{ts.budget}}</h5>
+                      </td>
+                  </tr>
+              </tbody>
+          </table>
+      </div>
+      </div>
+    </div> -->
+    <!-- <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Table with Border</h4>
+            <div class="table-responsive">
+                <table class="table table-bordered align-middle text-nowrap">
+                    <thead>
+                        <tr>
+                            <th class="text-dark font-medium fs-4">#</th>
+                            <th class="text-dark font-medium fs-4">First Name</th>
+                            <th class="text-dark font-medium fs-4">Last Name</th>
+                            <th class="text-dark font-medium fs-4">Username</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor='let tr of trow; index as i'>
+                            <td>
+                                {{ i + 1 }}
+                            </td>
+                            <td>
+                                {{tr.fname}}
+                            </td>
+                            <td>
+                                {{tr.lname}}
+                            </td>
+                            <td>
+                                {{tr.uname}}
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div> -->
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">LISTE DES ENTREPRISES</h4>
+        <div style="text-align: end;">
+          <button
+            class="btn btn-success"
+            (click)="openDialog()"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+            >Ajouter</button>
+        </div>
+
+        <div class="search-hero" style="margin: 10px">
+          <strong>Recherche: </strong>
+          <input
+            type="text"
+            name="search"
+            placeholder="Recherche"
+          />
+          <!-- <input type="text" name="search"  placeholder="search by hero, id or country"> -->
+        </div>
+        <div class="table-responsive">
+          <table
+            class="table table-hover align-middle text-nowrap table-bordered"
+          >
+            <thead>
+              <tr>
+                <th class="text-dark font-medium fs-4">#</th>
+                <th class="text-dark font-medium fs-4">Nom</th>
+                <th class="text-dark font-medium fs-4">Contact</th>
+                <th class="text-dark font-medium fs-4">Téléphone</th>
+                <th class="text-dark font-medium fs-4">TelSMS</th>
+                <th class="text-dark font-medium fs-4">Solde</th>
+                <th class="text-dark font-medium fs-4">Etat</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let tr of trow; index as i">
+                <td>
+                  {{ i + 1 }}
+                </td>
+                <td>
+                  {{ tr.fname }}
+                </td>
+                <td>
+                  {{ tr.lname }}
+                </td>
+                <td>
+                  {{ tr.uname }}
+                </td>
+                <td>
+                  {{ tr.TelSMS }}
+                </td>
+                <td>
+                  {{ tr.Solde }}
+                </td>
+                <td>
+                  {{ tr.Etat }}
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Table Striped</h4>
+            <div class="table-responsive">
+                <table class="table table-hover align-middle text-nowrap table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th class="text-dark font-medium fs-4">#</th>
+                            <th class="text-dark font-medium fs-4">First Name</th>
+                            <th class="text-dark font-medium fs-4">Last Name</th>
+                            <th class="text-dark font-medium fs-4">Username</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor='let tr of trow; index as i'>
+                            <td>
+                                {{ i + 1 }}
+                            </td>
+                            <td>
+                                {{tr.fname}}
+                            </td>
+                            <td>
+                                {{tr.lname}}
+                            </td>
+                            <td>
+                                {{tr.uname}}
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+  </div> -->
+  </div>
+</div>
+
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header" style="background-color: blue">
+        <h5
+          style="
+            color: aliceblue;
+            font-size: 26px;
+            margin-left: 62px;
+            font-weight: 620;
+          "
+          class="modal-title"
+          id="exampleModalLabel"
+        >
+          STUDENT MANAGEMENT
+        </h5>
+        <button
+          type="button"
+          class="close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="formValue">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Name</label>
+            <input
+              type="name"
+              formControlName="name"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+              placeholder="Enter your name"
+            />
+            <small
+              *ngIf="
+                formValue.get('name')?.invalid && formValue.get('name')?.touched
+              "
+              class="text-danger"
+              >Name is Required</small
+            >
+          </div>
+          <br />
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email</label>
+            <input
+              type="email"
+              formControlName="email"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+              placeholder="Enter your email"
+            />
+            <small
+              *ngIf="
+                formValue.get('email')?.invalid &&
+                formValue.get('email')?.touched
+              "
+              class="text-danger"
+              >email is Required</small
+            >
+          </div>
+          <br />
+          <div class="form-group">
+            <label for="exampleInputEmail1">Mobile</label>
+            <input
+              type="number"
+              formControlName="mobile"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+              placeholder="Enter mobile number"
+            />
+            <small
+              *ngIf="
+                formValue.get('mobile')?.invalid &&
+                formValue.get('mobile')?.touched
+              "
+              class="text-danger"
+              >Mobile number is Required</small
+            >
+          </div>
+          <br />
+          <div class="form-group">
+            <label for="exampleInputEmail1">City</label>
+            <input
+              type="name"
+              formControlName="city"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+              placeholder="Enter city name"
+            />
+            <small
+              *ngIf="
+                formValue.get('city')?.invalid && formValue.get('city')?.touched
+              "
+              class="text-danger"
+              >City name is Required</small
+            >
+          </div>
+          <br />
+        </form>
+      </div>
+      <div style="background: blue" class="modal-footer">
+        <button type="button" class="btn btn-warning" data-bs-dismiss="modal">
+          Close
+        </button>
+        <button
+          *ngIf="showadd"
+          (click)="addstudent()"
+          [disabled]="formValue.invalid"
+          type="button"
+          class="btn btn-success"
+        >
+          Add
+        </button>
+        <button
+          *ngIf="showupdate"
+          type="button"
+          [disabled]="formValue.invalid"
+          (click)="update()"
+          class="btn btn-success"
+        >
+          Update
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

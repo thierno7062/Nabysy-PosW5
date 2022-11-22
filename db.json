@@ -1,0 +1,11 @@
+{
+  "signupUsers": [
+    {
+      "fullname": "thierno niang",
+      "email": "thierno7062@gmail.com",
+      "password": "passe",
+      "mobile": 9988777,
+      "id": 1
+    }
+  ]
+}
